@@ -1,0 +1,12 @@
+D:\PAWebsite\Weblogger\Weblogger\bin\Debug\netcoreapp2.0\Weblogger.deps.json
+D:\PAWebsite\Weblogger\Weblogger\bin\Debug\netcoreapp2.0\Weblogger.runtimeconfig.json
+D:\PAWebsite\Weblogger\Weblogger\bin\Debug\netcoreapp2.0\Weblogger.runtimeconfig.dev.json
+D:\PAWebsite\Weblogger\Weblogger\bin\Debug\netcoreapp2.0\Weblogger.dll
+D:\PAWebsite\Weblogger\Weblogger\bin\Debug\netcoreapp2.0\Weblogger.pdb
+D:\PAWebsite\Weblogger\Weblogger\obj\Debug\netcoreapp2.0\Weblogger.csproj.CoreCompileInputs.cache
+D:\PAWebsite\Weblogger\Weblogger\obj\Debug\netcoreapp2.0\Weblogger.AssemblyInfoInputs.cache
+D:\PAWebsite\Weblogger\Weblogger\obj\Debug\netcoreapp2.0\Weblogger.AssemblyInfo.cs
+D:\PAWebsite\Weblogger\Weblogger\obj\Debug\netcoreapp2.0\Weblogger.dll
+D:\PAWebsite\Weblogger\Weblogger\obj\Debug\netcoreapp2.0\Weblogger.pdb
+D:\PAWebsite\Weblogger\Weblogger\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\PAWebsite\Weblogger\Weblogger\obj\Debug\netcoreapp2.0\Weblogger.csprojAssemblyReference.cache

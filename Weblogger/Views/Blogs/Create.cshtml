@@ -1,0 +1,52 @@
+﻿@model Weblogger.Models.Blog
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+<h2>Create</h2>
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-6"><label asp-for="Title"></label></div>
+            <div class="col-sm-6"><input asp-for="Title" class="form-control" /></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-6"><label asp-for="DateCreated"></label></div>
+            <div class="col-sm-6"><input type="date" value=@DateTime.Now.Year.ToString() -@DateTime.Now.Month.ToString()-@DateTime.Now.Day.ToString() asp-for="DateCreated" class="form-control" /></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-1"><label asp-for="BlogContent"></label></div>
+            <div class="col-sm-11">
+                @Html.TextAreaFor(model => model.BlogContent, 35,15, new { @class = "form-control" })
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-8 col-lg-offset-4"><button type="submit" class="btn btn-primary" />Submit Form</div>
+        </div>
+
+
+    </div>
+    <input type="hidden" asp-for="UserId" class="form-control" />
+    <input type="hidden" asp-for="Id" class="form-control" />
+
+
+</form>
+@section Scripts{
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
+    <script>
+  tinymce.init({
+      selector: '#BlogContent',
+      plugins: "table code paste",
+      toolbar: 'undo redo | formatselect | bold italic | ' +
+          'alignleft aligncenter alignright alignjustify | indent outdent | ' +
+          'table tableinsertdialog tablecellprops tableprops | fullscreen',
+      paste_data_images: true,
+      paste_retain_style_properties: 'all'
+  });
+    </script>
+}
+

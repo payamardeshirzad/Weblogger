@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Html
+
+@model Blog
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>View Blog</h2>
+<br />
+<br />
+<div class="row">
+    <div class="col-sm-4 pull-left">
+        @Model.Title
+    </div>
+    <div class="col-sm-2">
+        @Model.UserId
+        
+    </div>
+    <div class="col-sm-4 pull-right">
+        @Model.DateCreated.Date.ToShortDateString()
+    </div>
+</div>
+<br />
+<div class="row">
+    <div>
+        @(new HtmlString(@Model.BlogContent))
+    </div>
+</div>
+<br />
+<hr />
+<br />
+<div class="row">
+    <div class="col-sm-6">
+        <a class="btn btn-primary" asp-action="Index">Back to Index</a>
+    </div>
+    <div class="col-sm-6">
+        <a class="btn btn-success" asp-action="Edit" asp-route-Id="@Model.Id">Edit Post</a>
+    </div>
+</div>
+
+

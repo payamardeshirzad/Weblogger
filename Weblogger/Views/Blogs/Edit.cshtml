@@ -1,0 +1,53 @@
+﻿@model Weblogger.Models.Blog
+@{
+    ViewData["Title"] = "Edit";
+}
+<br />
+<h2>Edit</h2>
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-6"><label asp-for="Title"></label></div>
+            <div class="col-sm-6"><input asp-for="Title" class="form-control" /></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-6"><label asp-for="DateCreated"></label></div>
+            <div class="col-sm-6"><input type="date" value=@Model.DateCreated.Year.ToString()-@Model.DateCreated.Month.ToString()-@Model.DateCreated.Day.ToString() asp-for="DateCreated" class="form-control" /></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"><label asp-for="BlogContent"></label></div>
+            <div class="col-sm-9">
+                @Html.TextAreaFor(model => model.BlogContent, new { @class = "form-control" })
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-6">
+            <button type="submit" class="btn btn-success" />Update
+            </div>
+            <div class="col-sm-6">
+                <a class="btn btn-primary" asp-action="Index">Back to Index</a>
+            </div>
+        </div>
+
+
+    </div>
+    <input type ="hidden" asp-for="UserId" class="form-control" />
+    <input type="hidden" asp-for="Id" class="form-control" />
+
+
+</form>
+@section Scripts{
+    <script src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
+    <script>
+  tinymce.init({
+      selector: '#BlogContent',
+      plugins: "paste",
+      paste_data_images: true
+  });
+    </script>
+}
+
